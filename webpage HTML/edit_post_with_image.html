@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>edit post</title>
     <link rel="stylesheet" href="CSS and java/style_edit_create_post.css">
-</head>
 </head>
 <body>
     <main>
-        <h1>Create a CTO post</h1>
+        <h1>Edit your CTO post</h1>
             <h2>Username: JohnDoe</h2>
             <h3>based on the account that is currently logged in</h3>
         <form action="">
-            <h2 class="fieldname">Please enter Location</h2>
+            <h2 class="fieldname">Locations</h2>
                 <h3>Pleas select the location where you were observing the bird</h3>
             <select name="Locations" class="fieldname">
                 <option value="Location 1">Adohad</option>
@@ -33,11 +32,11 @@
                 <option value="Location 15">Zord</option>
             </select>
             <br>
-            <h2 class="fieldname">Please enter the Date</h2>
+            <h2 class="fieldname">Date</h2>
                 <h2>Please enter the date when you were observing the bird</h2>
             <input type="date" id="date" name="date">
             <br>
-            <h2 class="fieldname">Please enter the Time</h2>
+            <h2 class="fieldname">Time</h2>
                 <h3>Please enter the time when you were observing the bird and the duration of the observation</h3>
             <label for="hour">Hour:</label>
             <input type="number" min="00" max="23" name="hour" id="hour"> 
@@ -46,7 +45,7 @@
             <label for="duration">Duration (minutes):</label>
             <input type="number" min="0" name="duration of observation" id="duration">
             <br>
-            <h2 class="fieldname">Please select a Species</h2>
+            <h2 class="fieldname">Bird Species</h2>
                 <h3>Please select the species of the bird you were observing</h3>
             <select name="species" id="species">
                 <option value="Species 1">Blackbird</option>
@@ -66,11 +65,14 @@
                 <h3 class="ending">Please enter a comment about the bird you were observing</h3>
             <textarea name="comment" rows="10" cols="10"></textarea>
             <br>
-                <h2 class="ending">Add image (optional)</h2>
-                <h3 class="ending">Check the box if you want to add an image</h3>
+                <h2 class="ending">Change image?</h2>
+                <h3 class="ending"> please Check the yes box to change image or check no to keep image the same</h3>
+            <label for="checkbox">Yes</label>
             <input id="checkbox" type="checkbox" value="Yes" name="checkbox">
+            <label for="checkbox">No</label>
+            <input id="checkbox" type="checkbox" value="No" name="checkbox">
             <br>
-            <button type="submit">create post</button>
+            <button type="submit">Edit post</button>
             <a href="account_info.html">View Account Information</a>
         </form>
     </main>

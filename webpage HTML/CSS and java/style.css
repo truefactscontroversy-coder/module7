@@ -18,7 +18,7 @@ header p{
     color: black;
     font-size: 1.85rem;
     padding: 1% 1% 1% 1%;
-    background-image: linear-gradient(to bottom, #FFBE92, #FF9A66);
+    background-color: #FFBE92;
     margin: 2% 50% 2% 1%;
     text-align: center;
 }
@@ -34,35 +34,37 @@ nav a{
     text-decoration: underline;
 }
 main{
-    margin: 20% 0 0 0;
-    background-size: cover;
+    background-image: linear-gradient(to bottom, 
+    #FFBE92 0 50vh,  #F4D9A7 0 100%);
     width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-        
-    );
-    padding: 20px;
+    height: 120vh;
+    padding: 10px;
 }
 section{
     color: black;
     font-size: 1.855rem;
     text-align: center;
     padding: 0 0 0 0;
+    margin: 50px 0 2% 0;
 
 }
-section + section{
+h2.sub1{
     color: black;
     text-align: center;
-    background-color: #F4D9A7;
-    background-size: cover;
 }
-article.sub2{
+article{
     text-align: left;
+    font-size: 1.855rem;
     background-color: white;
-    background-size: cover;
-    margin: 1% 20% 20% 5%;
+    background-size: length 50px;
+    padding: 20px;
+    margin: 5% 65% 10% 5%;
+    display: inline-block;
+
 }
 footer{
     background-color: #997258;
-    background-size: cover;
+    width: 100%;
+    height: 10vh;
+    margin: 0 0 0 0;
 }

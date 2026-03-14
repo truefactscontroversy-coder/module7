@@ -1,0 +1,41 @@
+body{
+    background-color: #FFBE92;
+    background-size: cover;
+}
+header{
+    background-color: #F4D9A7;
+    width: 88vw;
+    height: 90vh;
+    margin: 5% 5% 5% 5%;
+    padding: 10% 0 0 0;
+}
+section h1{
+    text-align: center;
+    margin: 0 0 0 0;
+    font-size: 2.2rem;
+}
+form{
+    margin: 5% 10% 5% 10%;
+    font-size: 1.2rem;
+
+}
+input{
+    width: 80%;
+    height: 5vh;
+}
+button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 1% 1% 1% 1%;
+    margin: 15% 70% 1% 30%;
+    width: 40%;
+    height: 8vh;
+    font-size: 1.5rem;
+}
+a{
+    color: black;
+    font-size: 80%;
+    text-decoration: underline;
+    margin: 10% 10% 1% 30%; 
+}

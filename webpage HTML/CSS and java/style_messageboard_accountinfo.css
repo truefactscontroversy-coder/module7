@@ -1,0 +1,115 @@
+/* for both */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* for both colors the whole page */
+body{
+    width: 100vw;   
+    height: 100vh;
+    background-color: #FFBE92;
+}
+/* for both color just the header area*/
+header{
+    background-color: #F4D9A7;
+    width: 100vw;
+    height: 85vh;
+    color: black;
+    text-align: center;
+    font-size: 1.9rem;
+}
+/* for both */
+h1{
+    margin: 5% 0 0 0;
+    font-size: 5rem;
+}
+/* for both */
+h2{
+    margin: 2% 0 0 1%;
+    font-size: 2rem;
+}
+/* for message board search bar*/
+header input{
+    width: 30vw;
+    height: 5vh;
+    margin: 1% 0 0 0;
+    padding: 0 0 0 1%;
+    border-radius: 20px;
+    background-color: black;
+
+}
+/* for message board search bar*/
+::placeholder{
+    color: white;
+    padding: 0 0 0 1%;
+}
+/* for account info create post button*/
+header button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 1% 1% 1% 1%;
+    margin: 5% 0 2% 0;
+    width: 30vw;
+    height: 12vh;
+    font-size: 1.4rem;
+}
+/* for both */
+nav{
+    padding: 1% 0 0 1%;
+    font-size: 1.8rem;
+    text-align: left;
+}
+/* for both margin between header and main */
+main{
+    margin: 20% 5% 5% 5%;
+}
+/* for both margin between post and the rest of the page */
+article{
+    margin: 25% 15% 10% 10%;
+    background-color: white;
+    border-radius: 20px;
+}
+p{
+    color: black;
+    font-size: 1.8rem;
+    margin: 0 0 1% 1%;
+    text-align: left;
+}
+article p{
+    background-size: length 30% width 30%;
+    padding: 8% 8% 8% 8%;
+    font-size: 3rem;
+    margin: 0;
+}
+/* for both image for posts*/
+article img{
+
+    top: 30%;
+    left: 20%;
+    padding: 8% 40% 8% 8%;
+    width: 45vw;
+    height: 55vh;
+}
+/* for message board edit and delete post button */
+article > button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 1% 1% 1% 1%;
+    margin: 5% 5% 5% 10%;
+    width: 18vw;
+    height: 10vh;
+    font-size: 1.2rem;
+    gap: 1%;
+}
+/* for account info place holder */
+main a{
+    color: black;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin: 10% 20% 5% 30%; 
+    padding: 1% 1% 1% 1%;
+}
