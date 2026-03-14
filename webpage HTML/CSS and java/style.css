@@ -3,7 +3,7 @@
     padding: 0 0 0 0;
 }
 
-body{
+header{
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     width: 100vw;
@@ -12,59 +12,70 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
 }
+/* second section */
 header p{
     color: black;
     font-size: 1.85rem;
     padding: 1% 1% 1% 1%;
     background-color: #FFBE92;
-    margin: 2% 50% 2% 1%;
+    margin: 1% 50% 2% 1%;
     text-align: center;
 }
+/* navigation */
 nav{
     margin: .5% 1% 1% 1%;
     display: flex;
 
 }
+/* navigation */
 nav a{
     color: black;
     font-size: 1.5rem;
     margin: 20px;
     text-decoration: underline;
 }
+/* main content create account and interact sections */
 main{
     background-image: linear-gradient(to bottom, 
     #FFBE92 0 50vh,  #F4D9A7 0 100%);
     width: 100%;
-    height: 120vh;
+    height: 100%;
     padding: 10px;
+    
 }
 section{
     color: black;
     font-size: 1.855rem;
     text-align: center;
     padding: 0 0 0 0;
-    margin: 50px 0 2% 0;
+    margin: 6% 0 2% 0;
 
 }
-h2.sub1{
-    color: black;
-    text-align: center;
-}
-article{
+.post{
     text-align: left;
-    font-size: 1.855rem;
     background-color: white;
-    background-size: length 50px;
-    padding: 20px;
-    margin: 5% 65% 10% 5%;
-    display: inline-block;
-
+    background-size: cover;
+    margin: 5% 1% 1% 1%;
+    background-size: cover;
+    display: inline-flex;
+    border-radius: 20px;
+}
+.post p{
+    margin: 7% 5% 5% 5%;
+    padding: 0 1% 0 1%;
+    font-size: 70%;
+    display: inline-flex;
+}
+.post img{
+    width: 15vw;
+    height: 20vh;
+    padding: 0 1% 0 1%;
+    display: inline-flex;
 }
 footer{
     background-color: #997258;
     width: 100%;
-    height: 10vh;
+    height: 20vh;
     margin: 0 0 0 0;
 }
