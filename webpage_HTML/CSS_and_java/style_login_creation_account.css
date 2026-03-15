@@ -33,6 +33,10 @@ button{
     height: 8vh;
     font-size: 1.5rem;
 }
+button:hover{
+    background-color: gray;
+    color: black;
+}
 a{
     color: black;
     font-size: 80%;

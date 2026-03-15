@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS and java/style_edit_create_post.css">
+    <link rel="stylesheet" href="CSS_and_java/style_edit_create_post.css">
 </head>
 </head>
 <body>
@@ -12,10 +12,12 @@
         <h1>Create a CTO post</h1>
             <h2>Username: JohnDoe</h2>
             <h3>based on the account that is currently logged in</h3>
-        <form action="">
+        <form id="form" action="">
             <h2 class="fieldname">Please enter Location</h2>
-                <h3>Pleas select the location where you were observing the bird</h3>
-            <select name="Locations" class="fieldname">
+                <h3>Please select the location where you were observing the bird</h3>
+            <div id="error_for_location"></div>
+            <select id="locations" name="Locations" class="fieldname">
+                <option value="" disabled selected hidden>please select a Location</option>
                 <option value="Location 1">Adohad</option>
                 <option value="Location 2">Brunad</option>
                 <option value="Location 3">Bylyn</option>
@@ -35,20 +37,26 @@
             <br>
             <h2 class="fieldname">Please enter the Date</h2>
                 <h2>Please enter the date when you were observing the bird</h2>
-            <input type="date" id="date" name="date">
+            <div id="error_for_date"></div>
+            <input id="date" type="date" name="date">
             <br>
             <h2 class="fieldname">Please enter the Time</h2>
                 <h3>Please enter the time when you were observing the bird and the duration of the observation</h3>
+            <div id="error_for_hour"></div>
+            <div id="error_for_minuite"></div>
+            <div id="error_for_duration"></div>
             <label for="hour">Hour:</label>
-            <input type="number" min="00" max="23" name="hour" id="hour"> 
+            <input id="hour" type="number" min="00" max="23" name="hour" required> 
             <label for="minute">Minute:</label>
-            <input type="number" min="00" max="59" name="minute" id="minute">
+            <input id="minute" type="number" min="00" max="59" name="minute" required>
             <label for="duration">Duration (minutes):</label>
-            <input type="number" min="0" name="duration of observation" id="duration">
+            <input id="duration" type="number" min="0" name="duration of observation" required>
             <br>
             <h2 class="fieldname">Please select a Species</h2>
                 <h3>Please select the species of the bird you were observing</h3>
-            <select name="species" id="species">
+            <div id="error_for_species"></div>
+            <select id="species" name="species">
+                <option value="" disabled selected hidden>please select species of bird</option>
                 <option value="Species 1">Blackbird</option>
                 <option value="Species 2">Blue Tit</option>
                 <option value="Species 3">Goldfinch</option>
@@ -67,14 +75,15 @@
             <textarea name="comment" rows="10" cols="10"></textarea>
             <br>
                 <h2 class="ending">Add image (optional)</h2>
-            <label for="checkbox" id="label">Yes</label>
-            <input id="checkbox" type="checkbox" value="Yes" name="checkbox">
-            <label for="checkbox" id="label">No</label>
-            <input id="checkbox" type="checkbox" value="No" name="checkbox">
+            <label class="label" for="checkboxyes" >Yes</label>
+            <input id="checkboxyes" type="checkbox" value="Yes" name="checkbox">
+            <label class="label" for="checkboxno">No</label>
+            <input id="checkboxno" type="checkbox" value="No" name="checkbox">
             <br>
             <button type="submit">create post</button>
             <a href="account_info.html">View Account Information</a>
         </form>
     </main>
+<script src="CSS_and_java/java_for_page validation.js"></script>
 </body>
 </html>

@@ -38,6 +38,11 @@ header input{
     background-color: black;
 
 }
+header > input:hover,
+header > input:focus{
+    background-color: white;
+
+}
 /* for message board search bar*/
 ::placeholder{
     color: white;
@@ -54,8 +59,13 @@ header button{
     height: 12vh;
     font-size: 1.4rem;
 }
+header > button:hover{
+    background-color: gray;
+    color: black;
+}
 /* for both */
 nav{
+    color: black;
     padding: 1% 0 0 1%;
     font-size: 1.8rem;
     text-align: left;
@@ -102,6 +112,10 @@ article > button{
     height: 10vh;
     font-size: 1.2rem;
     gap: 1%;
+}
+article > button:hover{
+    background-color: gray;
+    color: black;
 }
 /* for account info place holder */
 main a{

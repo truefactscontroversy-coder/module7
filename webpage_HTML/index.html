@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>module 7 project</title>
-    <link rel="stylesheet" href="CSS and java/style.css">
+    <link rel="stylesheet" href="CSS_and_java/style.css">
+    <script defer> 
+        new_article = document.getElementsByClassName("post");
+        new_article .innerHT ;
+
+    </script>
 </head>
 <body>
     <header>
         <nav>
         <a href="index.html">Home</a>
         <a href="message_board.html">Message Board</a>
-        <a href="account_info.html">Account</a>
+        <a href="login_page.html">Account</a>
         </nav>
         <p>This is the best place to participate in <br> ornithology in Centrala! 
             <br/>
@@ -42,7 +47,7 @@
         <section>
             <h2>Interact with the community!</h2>
             <h3>recent posts</h3>
-                <article class="post" >
+                <article id="post1" class="post">
                         <p>Username: John Doe 
                             <br/>
                             Location: Centrala park
@@ -53,10 +58,10 @@
                             <br/>
                             Date of observation: 6/1/2024
                             <br/>
-                            <img src="CSS and java/fall_bird.jpg" alt="image of a bird">
+                            <img src="CSS_and_java/fall_bird.jpg" alt="image of a bird">
                         </p>
                 </article>
-                <article class="post">
+                <article id="post2" class="post">
                         <p>Username: John Doe 
                             <br/>
                             Location: Centrala park
@@ -67,7 +72,21 @@
                             <br/>
                             Date of observation: 6/1/2024
                             <br/>
-                            <img src="CSS and java/fall_bird.jpg" alt="image of a bird">
+                            <img src="CSS_and_java/fall_bird.jpg" alt="image of a bird">
+                        </p>
+                </article>
+                <article id="hidden_article" class="post">
+                        <p>Username: jane Doe 
+                            <br/>
+                            Location: park
+                            <br/>
+                            Time of observation: 10:30 - 11:00
+                            <br>
+                            Duration of observation: 40 minutes
+                            <br/>
+                            Date of observation: 6/10/2024
+                            <br/>
+                            <img src="CSS_and_java/fall_bird.jpg" alt="image of a bird">
                         </p>
                 </article>
         </section>
@@ -76,5 +95,6 @@
         
 
     </footer>
+<script src="CSS_and_java/java_for_homepage.js"></script>
 </body>
 </html>

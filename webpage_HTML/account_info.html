@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Information</title>
-    <link rel="stylesheet" href="CSS and java/style_messageboard_accountinfo.css">
+    <link rel="stylesheet" href="CSS_and_java/style_messageboard_accountinfo.css">
 </head>
 <body>
     <header>
@@ -15,11 +15,11 @@
         <p>Username: JohnDoe</p>
         <h1 class="header">Welcome to your CTO account</h1>
         <h2 class="header">Here you can create,view,edit, and delete your posts!</h2>
-        <button>Create Post</button>
+        <button id="create_post">Create Post</button>
     </header>
     <main>
         <section>
-            <article>
+            <article class="posts">
                 <p>username: John Doe 
                     <br/>
                     location: Centrala park
@@ -28,12 +28,12 @@
                     <br/>
                     date of observation: 6/1/2024
                     <br/>
-                    <img src="CSS and java/fall_bird.jpg" alt="image of a bird">
+                    
                 </p>
-                <button>Edit Post</button>
-                <button>Delete Post</button>
+                <button class="edit_post">Edit Post</button>
+                <button class="delete_post">Delete Post</button>
             </article>
-            <article>
+            <article class="posts">
                 <p>username: John Doe 
                     <br/>
                     location: Centrala park
@@ -42,12 +42,13 @@
                     <br/>
                     date of observation: 6/1/2024
                     <br/>
-                    <img src="CSS and java/fall_bird.jpg" alt="image of a bird">
+                    <img src="CSS_and_java/fall_bird.jpg" alt="image of a bird">
                 </p>
-                <button>Edit Post</button>
-                <button>Delete Post</button>
+                <button class="edit_post">Edit Post</button>
+                <button class="delete_post">Delete Post</button>
             </article>
         </section>
     </main>
+    <script src="CSS_and_java/java_for_nav_account.js"></script>
 </body>
 </html>

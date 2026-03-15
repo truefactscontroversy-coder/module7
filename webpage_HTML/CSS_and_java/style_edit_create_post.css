@@ -32,6 +32,11 @@ select{
     background-color: black;
     color: white;
 }
+select:hover,
+select:focus{
+    background-color: white;
+    color: black;
+}
 input{
     width: 10vw;
     height: 5vh;
@@ -41,6 +46,11 @@ input{
     color: white;
     padding: 0 0 0 1%;
     gap: 1%;
+}
+input:hover,
+input:focus{
+    background-color: white;
+    color: black;
 }
 label{
     padding: 0 0 0 5%;
@@ -68,7 +78,7 @@ main section{
 main > section{
     margin: 10% 10% 10% 10%;
 }
-#checkbox{
+#checkboxyes{
     width: 4vh;
     height: 4vh;
     padding: 0 0 0 1%;
@@ -78,13 +88,28 @@ main > section{
     color: white;
     text-align: center;
 }
-#label{
-    margin: 5% 0 5% 20%;
-}
-label[for="checkbox"]{
-    font-size: 1.3rem;
+#checkboxno{
+    width: 4vh;
+    height: 4vh;
     padding: 0 0 0 1%;
-    margin: 0 0 0 5%;
+    margin: 5% 0 5% 0;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.label{
+    margin: 0 0 0 20%;
+}
+#checkboxyes{
+    font-size: 1.3rem;
+    padding: 0 0 0 0;
+    margin: 5% 0 5% 0;
+}
+#checkboxno{
+    font-size: 1.3rem;
+    padding: 0 0 0 0;
+    margin: 5% 0 5% 0;
 }
 button{
     background-color: black;
@@ -97,6 +122,43 @@ button{
     font-size: 1.4rem;
 
 }
+button:hover{
+    background-color: gray;
+    color: black;
+}
 .ending{
     margin: 0 10% 0 5%;
+}
+#error_for_location{
+    font-size: 1rem;
+    font-style: bold;
+    border-color: red;
+    border-style: solid;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 5%;
+    padding: 2% 2% 2% 2%;
+    display: none;
+}
+#error_for_species{
+    font-size: 1rem;
+    font-style: bold;
+    border-color: red;
+    border-style: solid;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 5%;
+    padding: 2% 2% 2% 2%;
+    display: none;
+}
+#error_for_date{
+    font-size: 1rem;
+    font-style: bold;
+    border-color: red;
+    border-style: solid;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 5%;
+    padding: 2% 2% 2% 2%;
+    display: none;
 }
