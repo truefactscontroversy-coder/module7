@@ -37,12 +37,31 @@ function goToedit_without_post() {
 }
 
 const all_del_btn = document.querySelectorAll(".delete_post")
+const modal = document.getElementById("delete_postModal");
+const close_btn = document.getElementsByClassName("close")[0];
 
 if (all_del_btn) {
     all_del_btn.forEach( delete_post => {
         delete_post.addEventListener("click", goToedit_post);
+        close_btn.addEventListener("click", close_page)
+            
     });
 };
 function goToedit_post() {
-    window.location.href = "/webpage_HTML/delet_post.html";
+    modal.style.display = "block";
 };
+function close_page () {
+    modal.style.display = "none"
+}
+const confirm_btn = document.getElementById("confirm")
+
+const cancel_btn = document.getElementById("cancel")
+
+if (confirm_btn && cancel_btn) {
+    confirm_btn.addEventListener("click", close_page);
+    cancel_btn.addEventListener("click", close_page);
+}
+
+/*
+add post not deleted and deleted modal?
+*/

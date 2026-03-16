@@ -54,29 +54,38 @@ section{
     color: black;
     font-size: 1.855rem;
     text-align: center;
-    padding: 0 0 0 0;
-    margin: 6% 0 2% 0;
+    padding: 1% 1% 1% 1%;
+    margin: 5% 0 5% 2%;
 
+}
+h4{
+    color: black;
+    font-size: 1.855rem;
+    padding: 0 0 0 0;
+    margin: 0 0 0 5%;
+    padding: 0;
+    display: inline;
+    position: absolute;
 }
 .post{
     text-align: left;
     background-color: white;
     background-size: cover;
     margin: 5% 1% 1% 1%;
-    background-size: cover;
     display: inline-flex;
     border-radius: 20px;
+    padding: 2% 1% 2% 1%;
 }
 .post p{
     margin: 7% 5% 5% 5%;
-    padding: 0 1% 0 1%;
+    padding: 5% 1% 5% 1%;
     font-size: 70%;
     display: inline-flex;
 }
 .post img{
-    width: 15vw;
-    height: 20vh;
-    padding: 0 1% 0 1%;
+    width: 18vw;
+    height: 40vh;
+    padding: 15% 2% 5% 2%;
     display: inline-flex;
 }
 footer{

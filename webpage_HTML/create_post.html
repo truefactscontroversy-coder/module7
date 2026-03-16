@@ -6,7 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS_and_java/style_edit_create_post.css">
 </head>
-</head>
 <body>
     <main>
         <h1>Create a CTO post</h1>
@@ -42,15 +41,13 @@
             <br>
             <h2 class="fieldname">Please enter the Time</h2>
                 <h3>Please enter the time when you were observing the bird and the duration of the observation</h3>
-            <div id="error_for_hour"></div>
-            <div id="error_for_minuite"></div>
-            <div id="error_for_duration"></div>
+            <div id="error_for_time"></div>
             <label for="hour">Hour:</label>
-            <input id="hour" type="number" min="00" max="23" name="hour" required> 
+            <input id="hour" type="number" min="00" max="24" name="hour" > 
             <label for="minute">Minute:</label>
-            <input id="minute" type="number" min="00" max="59" name="minute" required>
+            <input id="minute" type="number" min="00" max="59" name="minute" >
             <label for="duration">Duration (minutes):</label>
-            <input id="duration" type="number" min="0" name="duration of observation" required>
+            <input id="duration" type="number" min="0" name="duration of observation" >
             <br>
             <h2 class="fieldname">Please select a Species</h2>
                 <h3>Please select the species of the bird you were observing</h3>
@@ -84,6 +81,6 @@
             <a href="account_info.html">View Account Information</a>
         </form>
     </main>
-<script src="CSS_and_java/java_for_page validation.js"></script>
+    <script src="CSS_and_java/java_for_page_validation.js"></script>
 </body>
 </html>

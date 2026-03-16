@@ -130,35 +130,47 @@ button:hover{
     margin: 0 10% 0 5%;
 }
 #error_for_location{
-    font-size: 1rem;
-    font-style: bold;
+    font-size: 1.5rem;
+    font-weight: bold;
     border-color: red;
     border-style: solid;
     width: fit-content;
     height: fit-content;
     margin-left: 5%;
-    padding: 2% 2% 2% 2%;
+    padding: 1% 1% 1% 1%;
     display: none;
 }
 #error_for_species{
-    font-size: 1rem;
-    font-style: bold;
+    font-size: 1.5rem;
+    font-weight: bold;
     border-color: red;
     border-style: solid;
     width: fit-content;
     height: fit-content;
     margin-left: 5%;
-    padding: 2% 2% 2% 2%;
+    padding: 1% 1% 1% 1%;
     display: none;
 }
 #error_for_date{
-    font-size: 1rem;
-    font-style: bold;
+    font-size: 1.5rem;
+    font-weight: bold;
     border-color: red;
     border-style: solid;
     width: fit-content;
     height: fit-content;
     margin-left: 5%;
-    padding: 2% 2% 2% 2%;
+    padding: 1% 1% 1% 1%;
+    display: none;
+}
+#error_for_time{
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-color: red;
+    border-style: solid;
+    width: fit-content;
+    height: fit-content;
+    margin: 2% 2% 2% 5%;
+    padding: 1% 1% 1% 1%;
+
     display: none;
 }

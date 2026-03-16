@@ -14,21 +14,37 @@ section h1{
     margin: 0 0 0 0;
     font-size: 2.2rem;
 }
+/*
 form{
     margin: 5% 10% 5% 10%;
     font-size: 1.2rem;
 
 }
+    */
+#username_header{
+    margin: 1% 10% 1% 10%;
+    font-size: 2rem;
+    padding: 1% 1% 1% 1%;
+
+
+}
+#password_header{
+    margin: 1% 10% 1% 10%;
+    font-size: 2rem;
+    padding: 1% 1% 1% 1%;
+
+}
 input{
     width: 80%;
     height: 5vh;
+    margin: 1% 10% 1% 10%;
 }
 button{
     background-color: black;
     color: white;
     border-radius: 5px;
     padding: 1% 1% 1% 1%;
-    margin: 15% 70% 1% 30%;
+    margin: 10% 70% 1% 30%;
     width: 40%;
     height: 8vh;
     font-size: 1.5rem;
@@ -39,7 +55,7 @@ button:hover{
 }
 a{
     color: black;
-    font-size: 80%;
+    font-size: 100%;
     text-decoration: underline;
     margin: 10% 10% 1% 30%; 
 }
