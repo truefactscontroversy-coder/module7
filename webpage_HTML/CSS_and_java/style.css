@@ -26,6 +26,7 @@ header p{
     background-color: #FFBE92;
     margin: 0 50% 2% 1%;
     text-align: center;
+    border-radius: 5px;
 }
 /* navigation */
 nav{
@@ -37,10 +38,16 @@ nav{
 nav a{
     color: black;
     font-size: 1.5rem;
-    margin: 20px;
+    margin: 1%;
     text-decoration: underline;
 }
-
+header h1{
+    text-align: center;
+    background-color: #FFBE92;
+    border-radius: 10px;
+    margin: 1% 1% 1% 1%;
+    padding: .5% .5% .5% .5%;
+}
 /* main content create account and interact sections */
 main{
     background-image: linear-gradient(to bottom, 

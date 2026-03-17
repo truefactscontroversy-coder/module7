@@ -62,6 +62,4 @@ if (confirm_btn && cancel_btn) {
     cancel_btn.addEventListener("click", close_page);
 }
 
-/*
-add post not deleted and deleted modal?
-*/
+

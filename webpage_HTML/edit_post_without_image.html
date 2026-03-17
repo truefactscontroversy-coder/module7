@@ -11,7 +11,7 @@
         <h1>Edit your CTO post</h1>
             <h2>Username: JohnDoe</h2>
             <h3>based on the account that is currently logged in</h3>
-        <form action="">
+        <form id="form" action="">
             <h2 class="fieldname">Locations</h2>
                 <h3>Pleas select the location where you were observing the bird</h3>
             <select name="Locations" class="fieldname">
@@ -34,10 +34,12 @@
             <br>
             <h2 class="fieldname">Date</h2>
                 <h2>Please enter the date when you were observing the bird</h2>
+            <div id="error_for_date"></div>
             <input type="date" id="date" name="date">
             <br>
             <h2 class="fieldname">Time</h2>
                 <h3>Please enter the time when you were observing the bird and the duration of the observation</h3>
+                <div id="error_for_time"></div>
             <label for="hour">Hour:</label>
             <input type="number" min="00" max="23" name="hour" id="hour"> 
             <label for="minute">Minute:</label>
@@ -68,13 +70,12 @@
                 <h2 class="ending">Add image (optional)</h2>
             <label for="checkboxyes" class="label">Yes</label>
             <input id="checkboxyes" type="checkbox" value="Yes" name="checkbox">
-            <label for="checkboxno" class="label">No</label>
-            <input id="checkboxno" type="checkbox" value="No" name="checkbox">
+            <input id="image_for_post" type="image">
             <br>
             <button type="submit">Edit post</button>
             <a href="account_info.html">View Account Information</a>
         </form>
     </main>
-    <script src="CSS_and_java/java_for_nav_account.js"></script>
+    <script src="CSS_and_java/java_for_page_validation.js"></script>
 </body>
 </html>

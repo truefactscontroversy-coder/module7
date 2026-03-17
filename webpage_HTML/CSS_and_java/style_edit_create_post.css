@@ -101,6 +101,12 @@ main > section{
 .label{
     margin: 0 0 0 20%;
 }
+
+#no_btn{
+    margin: 0 0 0 2%;
+    
+}
+
 #checkboxyes{
     font-size: 1.3rem;
     padding: 0 0 0 0;
@@ -111,6 +117,14 @@ main > section{
     padding: 0 0 0 0;
     margin: 5% 0 5% 0;
 }
+#image_for_post{
+    border: none;
+    outline: none;
+    margin: 1% 20% 1% 25%;
+    display: none;
+    background-image: url("fall_bird.jpg");
+}
+
 button{
     background-color: black;
     color: white;
@@ -128,6 +142,15 @@ button:hover{
 }
 .ending{
     margin: 0 10% 0 5%;
+}
+#for_image{
+    margin: 0 10% 0 5%;
+    padding: 1% 1% 1% 1%;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 1%;
+    border-color: red;
+    border-style: none;
 }
 #error_for_location{
     font-size: 1.5rem;
