@@ -1,7 +1,7 @@
 from flask import Flask, request, redirect, render_template, url_for
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
 
 UPLOAD_FOLDER = "uploaded_content"
 
@@ -10,31 +10,30 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 @app.route("/")
 
 def home_page():
-    return open("webpage_HTML\index.html").read()
-    
+    return render_template("index.html")
+
+
 @app.route("/login_page.html")
 def login_page():
-    return open("webpage_HTML\login_page.html")
+    return render_template("login_page.html")
 
 @app.route("/account_info.html")
 def account_page():
-    return open("webpage_HTML\account_info.html")
+    return render_template("account_info.html")
 
 
 USERNAME = ''
 PASSWORD = ''
 
-@app.route('/uploaded_content', methods=['GET', 'POST'])
+@app.route('/login_page.html', methods=['GET'])
                                          
 def upload():
-    file = request.files["form"]
-    if (file):
-        if (request.method == 'POST'):
+        if (request.method == 'GET'):
             username = request.form['username']
             password = request.form['password']
-            if (username != "" and password != ""):
-                print("hello")
-            else:
+            if (username == "" and password == ""):
                 return "Invalid login"
+
+                
 
 app.run(debug=True)
