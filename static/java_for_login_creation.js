@@ -43,10 +43,9 @@ form_data.addEventListener("submit", (e) => {
         password_header.style.border = "solid red";
         e.preventDefault()
     } 
-    /*
     if ((username.value !== '' && username.value !== null) && password.value !== '' && password.value !== null) {
         login_button.addEventListener("submit", goToaccount);
-    }*/
+    }
 });
 
 form_data.addEventListener("change", () => {
@@ -58,8 +57,8 @@ form_data.addEventListener("change", () => {
     
 
 })
-/*
+
 function goToaccount() {
         window.open('account_info.html', '_blank');
         window.close('login_page.html');
-}*/
+}
