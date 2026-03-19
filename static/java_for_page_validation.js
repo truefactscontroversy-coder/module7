@@ -62,10 +62,14 @@ form_data.addEventListener("submit", (e) =>{
         if (locationSelect.value === '' || locationSelect.value === null || locationSelect.value === "please select a Location") {
         error_for_loction.innerHTML = "Please select a location";
         error_for_loction.style.display = "block";
+        e.preventDefault()
+
         } 
         if (species.value === '' || species.value === null || species.value === "please select species of bird") {
             error_for_species.innerHTML = "Please select a species of bird";
             error_for_species.style.display = "block";
+            e.preventDefault()
+
         }   
     } catch (TypeError) {
         
@@ -73,31 +77,42 @@ form_data.addEventListener("submit", (e) =>{
     if (date.value === '' || date.value === null) {
         error_for_date.innerHTML = "please select the day, month and year you observed the bird"
         error_for_date.style.display = "block";
+        e.preventDefault()
+
     } 
     if (hour.value === '' || hour.value === null ) {
         time_error.push ("please enter the hour you started observed the bird");
         error_for_time.innerHTML = time_error;
         error_for_time.style.display = "block";
+        e.preventDefault()
+
     } 
     if (minute.value === '' || minute.value === null ) {
         time_error.push ("please enter the minuite you started observed the bird");
         error_for_time.innerHTML = time_error.join("<br> <br>")
         error_for_time.style.display = "block";
+        e.preventDefault()
+
     } 
     if (duration.value === '' || duration.value === null ) {
         time_error.push ("please enter how long you observed the bird in minutes");
         error_for_time.innerHTML = time_error.join("<br> <br>")
         error_for_time.style.display = "block";
+        e.preventDefault()
+
     } 
     if (check_yes && check_no) {
         if (!check_yes.checked && !check_no.checked) {
             error_for_image.style.borderStyle = "solid";
+            e.preventDefault()
+
         }
+
+
 
     }
 
-    e.preventDefault()
-
+    
     
 });
 
@@ -106,6 +121,8 @@ form_data.addEventListener("change", () => {
     if (locationSelect.value === '' || locationSelect.value === null || locationSelect.value === "please select a Location") {
         error_for_loction.innerHTML = "Please select a location"
         error_for_loction.style.display = "block";
+        e.preventDefault()
+
     } else {
         error_for_loction.style.display = "none";
         error_for_loction.innerHTML = '';
@@ -113,6 +130,8 @@ form_data.addEventListener("change", () => {
     if (species.value === '' || species.value === null || species.value === "please select species of bird") {
             error_for_species.innerHTML = "Please select a species of bird";
             error_for_species.style.display = "block";
+            e.preventDefault()
+
     } else {
             error_for_species.style.display = "none";
             error_for_species.innerHTML = '';
@@ -123,6 +142,8 @@ form_data.addEventListener("change", () => {
     if (date.value === '' || date.value === null) {
         error_for_date.innerHTML = "please select the day, month and year you observed the bird"
         error_for_date.style.display = "block";
+        e.preventDefault()
+
     } else {
         error_for_date.style.display = "none";
         error_for_date.innerHTML = '';
@@ -131,32 +152,42 @@ form_data.addEventListener("change", () => {
 });
 
 
-form_data.addEventListener("input", () => {
+form_data.addEventListener("input", (e) => {
     time_error = []
     if (hour.value > 24){
         time_error.push ("oh not invalid hour please enter a number between 0-24");
         error_for_time.innerHTML = time_error.join("<br> <br>");
         error_for_time.style.display = "block";
+        e.preventDefault()
+
     } 
     if (hour.value === '' || hour.value === null ) {
         time_error.push ("please enter the hour you started observed the bird"); 
         error_for_time.innerHTML = time_error.join("<br> <br>");
         error_for_time.style.display = "block";
+        e.preventDefault()
+
     } 
     if (minute.value > 59){
         time_error.push ("oh not invalid number of minutes please enter a number between 0-59");
         error_for_time.innerHTML = time_error.join("<br> <br>");
         error_for_time.style.display = "block";
+        e.preventDefault()
+
     } 
     if (minute.value === '' || minute.value === null ) {
         time_error.push ("please enter the minuite you started observed the bird");
         error_for_time.innerHTML = time_error.join("<br> <br>");
         error_for_time.style.display = "block";
+        e.preventDefault()
+
     }
     if (duration.value === '' || duration.value === null){
         time_error.push ("please enter how long you observed the bird");
         error_for_time.innerHTML = time_error.join("<br> <br>");
         error_for_time.style.display = "block";
+        e.preventDefault()
+
     }
     else {
         error_for_time.style.display = "none";
@@ -187,4 +218,3 @@ if (check_yes && check_no) {
         }
     })
 }
-    

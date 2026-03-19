@@ -7,7 +7,7 @@ if (create_post_btn){
     document.getElementById("create_post").addEventListener("click", goTocreate_post);
 };
 function goTocreate_post() {
-    window.location.href = "/webpage_HTML/create_post.html";
+    window.location.href = "/create_post.html";
 };
 
 
@@ -30,10 +30,10 @@ if (all_edit_btn) {
     });
 };
 function goToedit_with_post() {
-    window.location.href = "/webpage_HTML/edit_post_with_image.html";
+    window.location.href = "/edit_post_with_image.html";
 }
 function goToedit_without_post() {
-    window.location.href = "/webpage_HTML/edit_post_without_image.html";
+    window.location.href = "/edit_post_without_image.html";
 }
 
 const all_del_btn = document.querySelectorAll(".delete_post")

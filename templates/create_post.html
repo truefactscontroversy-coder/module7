@@ -11,27 +11,27 @@
         <h1>Create a CTO post</h1>
             <h2>Username: JohnDoe</h2>
             <h3>based on the account that is currently logged in</h3>
-        <form id="form" action="">
+        <form id="form" action="/create_post" method="post" enctype="multipart/form-data">
             <h2 class="fieldname">Please enter Location</h2>
                 <h3>Please select the location where you were observing the bird</h3>
             <div id="error_for_location"></div>
             <select id="locations" name="Locations" class="fieldname">
                 <option value="" disabled selected hidden>please select a Location</option>
-                <option value="Location 1">Adohad</option>
-                <option value="Location 2">Brunad</option>
-                <option value="Location 3">Bylyn</option>
-                <option value="Location 4">Docia</option>
-                <option value="Location 5">Erean</option>   
-                <option value="Location 6">Frestin</option>
-                <option value="Location 7">Holmer</option>
-                <option value="Location 8">Marend</option>
-                <option value="Location 9">Obelyn</option>
-                <option value="Location 10">Pryn</option>
-                <option value="Location 11">Ruril</option>
-                <option value="Location 12">Ryall</option>
-                <option value="Location 13">Tallan</option>
-                <option value="Location 14">Vertwall</option>
-                <option value="Location 15">Zord</option>
+                <option value="Adohad">Adohad</option>
+                <option value="Brunad">Brunad</option>
+                <option value="Bylyn">Bylyn</option>
+                <option value="Docia">Docia</option>
+                <option value="Erean">Erean</option>   
+                <option value="Frestin">Frestin</option>
+                <option value="Holmer">Holmer</option>
+                <option value="Marend">Marend</option>
+                <option value="Obelyn">Obelyn</option>
+                <option value="Pryn">Pryn</option>
+                <option value="Ruril">Ruril</option>
+                <option value="Ryall">Ryall</option>
+                <option value="Tallan">Tallan</option>
+                <option value="Vertwall">Vertwall</option>
+                <option value="Zord">Zord</option>
             </select>
             <br>
             <h2 class="fieldname">Please enter the Date</h2>
@@ -47,24 +47,23 @@
             <label for="minute">Minute:</label>
             <input id="minute" type="number" min="00" max="59" name="minute" >
             <label for="duration">Duration (minutes):</label>
-            <input id="duration" type="number" min="0" name="duration of observation" >
+            <input id="duration" type="number" min="0" name="duration_of_observation" >
             <br>
             <h2 class="fieldname">Please select a Species</h2>
                 <h3>Please select the species of the bird you were observing</h3>
             <div id="error_for_species"></div>
             <select id="species" name="species">
                 <option value="" disabled selected hidden>please select species of bird</option>
-                <option value="Species 1">Blackbird</option>
-                <option value="Species 2">Blue Tit</option>
-                <option value="Species 3">Goldfinch</option>
-                <option value="Species 4">House Sparrow</option>
-                <option value="Species 5">Magpie</option>
-                <option value="Species 6">Robin</option>
-                <option value="Species 7">Sparrow</option>
-                <option value="Species 8">Starling</option>
-                <option value="Species 9">Wood Pigeon</option>
-                <option value="Species 10">other</option>
-                <option value="Species 11">unknown</option>
+                <option value="Blackbird">Blackbird</option>
+                <option value="Blue Tit">Blue Tit</option>
+                <option value="Goldfinch">Goldfinch</option>
+                <option value="House Sparrow">House Sparrow</option>
+                <option value="Magpie">Magpie</option>
+                <option value="Robin">Robin</option>
+                <option value="Starling">Starling</option>
+                <option value="Wood Pigeon">Wood Pigeon</option>
+                <option value="other">other</option>
+                <option value="unknown">unknown</option>
             </select>
             <br>
             <h2 class="ending">Please enter a comment</h2>
@@ -74,7 +73,7 @@
                 <h2 class="ending">Add image (optional)</h2>
             <label class="label" for="checkboxyes" >Yes</label>
             <input id="checkboxyes" type="checkbox" value="Yes" name="checkbox">
-            <input type="image" id="image_for_post" alt="your image">
+            <input type="file" id="image_for_post" name="image">
             <br>
             <button type="submit">create post</button>
             <a href="account_info.html">View Account Information</a>
