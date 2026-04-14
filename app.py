@@ -24,21 +24,30 @@ def account_creation_page():
     return render_template("account_creation.html")
 
 @app.route('/create_account', methods=['GET','POST'])
-def create_account():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        login_cred = []
-        login_cred.append(username)
-        login_cred.append(password)
-        if username != "" and password != "":
-            with open(r"templates\uploaded_content\user_data.csv", mode="w" ) as file :
-                writer = csv.writer(file)
-                writer.writerow(login_cred)
 
-            return redirect("account_info.html")
-        else: 
-            return "please enter a password"
+def create_account():
+    
+    username = request.form['username']
+    password = request.form['password']
+    print(password)
+    login_cred = []
+    login_cred.append(username)
+    login_cred.append(password)
+    if (len(password) < 6):
+        return jsonify ({
+            "status": "tooshort"
+        })
+    else:
+        with open(r"templates\uploaded_content\user_data.csv", mode="w" ) as file :
+            writer = csv.writer(file)
+            writer.writerow(login_cred)
+        return jsonify ({ 
+            "status": "success", 
+            "redirect": url_for("account_page") 
+        })
+    
+        
+
 
 
 
@@ -53,6 +62,9 @@ USER_NAME = file_data.pop(0)
 PASSWORD = file_data.pop(0)
 USER_NAME = USER_NAME.strip()
 PASSWORD = PASSWORD.strip()
+
+"""USER_NAME = "CTOuser1"
+PASSWORD = "BIRDtwo12"""
 
 
 @app.route("/login_page.html")
@@ -73,11 +85,14 @@ def login():
             "status": "success",
             "redirect": url_for("account_page")
         })
-    else:
+    elif username != USER_NAME:
         return jsonify ({
-            "status": "fail"
+            "status": "incorrect_Username"
         })
-
+    elif password != PASSWORD:
+        return jsonify ({
+            "status": "incorrect_Password"
+        })
 
 
 
@@ -109,35 +124,47 @@ def home_page():
 @app.route('/create_post', methods=['GET','POST'])
 
 def create_post():
-    if request.method == 'POST':
-        post_info = []
-        location = request.form['Locations']
-        date = request.form['date']
-        hour = request.form['hour']
-        min = request.form['minute']
-        dur = request.form['duration_of_observation']
-        species = request.form['species']
-        image = request.files['image']
-        file_pth_for_img = r"C:\Users\ajlxs\OneDrive\Documents\unit_7\module7\templates\uploaded_content\images"
-        post_info.append(location)
-        post_info.append(date)
-        post_info.append(hour)
-        post_info.append(min)
-        post_info.append(dur)
-        post_info.append(species)
-        image_path = os.path.join(app.config[r'templates\uploaded_content\images'], image.filename)
-        url_for_img = image.save(image_path)
-        post_info.append(url_for_img)
+   
+    post_info = []
+    location = request.form.get('Locations')
+    date = request.form.get('date')
+    hour = request.form.get('hour')
+    min = request.form.get('minute')
+    dur = request.form.get('duration_of_observation')
+    activity = request.form.get('activity')
+    species = request.form.get('species')
+    comments = request.form.get('comment')
 
-        with open(r"templates\uploaded_content\user_data.csv", mode="a" ) as file :
-                writer = csv.writer(file)
-                writer.writerow(post_info)
-        
-
-
-        return redirect("account_info.html")
+    try:
+        image = request.files.get('image')
+    except ValueError:
+        image = None
     
-    return render_template("create_post.html")
+    post_info.append(location)
+    post_info.append(date)
+    post_info.append(hour)
+    post_info.append(min)
+    post_info.append(dur)
+    post_info.append(activity)
+    post_info.append(species)
+    post_info.append(comments)        
+    with open(r"module7\templates\uploaded_content\user_data.csv", mode="a", newline="") as file :
+            writer = csv.writer(file)
+            writer.writerow(post_info)    
+    
+    file_pth_for_img = r"C:\Users\ajlxs\OneDrive\Documents\unit_7\module7\templates\uploaded_content\images"
+
+    if image is not None and image.filename != '':
+        image_path = os.path.join(file_pth_for_img, image.filename)
+        url_for_img = image.save(image_path)
+        post_info.append(url_for_img)      
+
+    return jsonify ({ 
+        "status": "success", 
+        "redirect": url_for("account_page") 
+    })
+    
+    
     
 
          

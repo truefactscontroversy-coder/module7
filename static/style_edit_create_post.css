@@ -10,12 +10,12 @@ main{
 }
 h1{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     padding: 2% 0 0 0;
 }
 h2{
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     padding: 2% 0 0 5%;
 }
 h3{
@@ -54,7 +54,7 @@ input:focus{
 }
 label{
     padding: 0 0 0 5%;
-    font-size: 1.25rem;
+    font-size: 1.8rem;
 
 }
 #date{
@@ -70,6 +70,7 @@ textarea{
     margin: 1% 30% 0 10%;
     padding: 5% 5% 5% 5%;
     border-radius: 20px;
+    color: black;
 }
 main section{
     font-size: 1.5rem;
@@ -187,6 +188,24 @@ button:hover{
     display: none;
 }
 #error_for_time{
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-color: red;
+    border-style: solid;
+    width: fit-content;
+    height: fit-content;
+    margin: 2% 2% 2% 5%;
+    padding: 1% 1% 1% 1%;
+
+    display: none;
+}
+#comment_error{
+    border-color: red;
+    border-style: none;
+    padding: 1% 1% 1% 1%;
+    font-size: 1.5rem;
+}
+#error_for_activity{
     font-size: 1.5rem;
     font-weight: bold;
     border-color: red;

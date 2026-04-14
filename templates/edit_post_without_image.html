@@ -10,7 +10,7 @@
     <main>
         <h1>Edit your CTO post</h1>
             <h2>Username: JohnDoe</h2>
-            <h3>based on the account that is currently logged in</h3>
+                <h3>based on the account that is currently logged in</h3>
         <form id="form" action="">
             <h2 class="fieldname">Locations</h2>
                 <h3>Pleas select the location where you were observing the bird</h3>
@@ -33,7 +33,7 @@
             </select>
             <br>
             <h2 class="fieldname">Date</h2>
-                <h2>Please enter the date when you were observing the bird</h2>
+                <h3>Please enter the date when you were observing the bird</h3>
             <div id="error_for_date"></div>
             <input type="date" id="date" name="date">
             <br>
@@ -41,11 +41,21 @@
                 <h3>Please enter the time when you were observing the bird and the duration of the observation</h3>
                 <div id="error_for_time"></div>
             <label for="hour">Hour:</label>
-            <input type="number" min="00" max="23" name="hour" id="hour"> 
+            <input type="number" min="00" max="23" name="hour" id="hour" placeholder="HH"> 
             <label for="minute">Minute:</label>
-            <input type="number" min="00" max="59" name="minute" id="minute">
+            <input type="number" min="00" max="59" name="minute" id="minute" placeholder="MM">
             <label for="duration">Duration (minutes):</label>
-            <input type="number" min="0" name="duration of observation" id="duration">
+            <input type="number" min="0" name="duration of observation" id="duration" placeholder="Duration">
+            <br>
+            <h2 class="fieldname">Please select an activity </h2>
+                <h3>Please select the activity you observed the bird doing</h3>
+            <div id="error_for_activity"></div>
+            <select id="activity" name="activity">
+                <option value="Feeding">Feeding</option>
+                <option value="Nesting">Nesting</option>
+                <option value="Visiting">Visiting</option>
+                <option value="Other">other</option>
+            </select>
             <br>
             <h2 class="fieldname">Bird Species</h2>
                 <h3>Please select the species of the bird you were observing</h3>
@@ -65,9 +75,9 @@
             <br>
             <h2 class="ending">Please enter a comment</h2>
                 <h3 class="ending">Please enter a comment about the bird you were observing</h3>
-            <textarea name="comment" rows="10" cols="10"></textarea>
+            <textarea name="comment" rows="10" cols="10">placeholder comment</textarea>
             <br>
-                <h2 class="ending">Add image (optional)</h2>
+            <h2 class="ending">Add image (optional)</h2>
             <label for="checkboxyes" class="label">Yes</label>
             <input id="checkboxyes" type="checkbox" value="Yes" name="checkbox">
             <input id="image_for_post" type="file" alt="your image">

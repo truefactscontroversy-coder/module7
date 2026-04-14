@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="static/style_edit_create_post.css">
+    <link rel="stylesheet" href="\static\style_edit_create_post.css">
 </head>
 <body>
     <main>
         <h1>Create a CTO post</h1>
             <h2>Username: JohnDoe</h2>
-            <h3>based on the account that is currently logged in</h3>
-        <form id="form" action="/create_post" method="post" enctype="multipart/form-data">
+                <h3>based on the account that is currently logged in</h3>
+        <form id="form_data" action="/create_post" method="post" enctype="multipart/form-data">
             <h2 class="fieldname">Please enter Location</h2>
                 <h3>Please select the location where you were observing the bird</h3>
             <div id="error_for_location"></div>
-            <select id="locations" name="Locations" class="fieldname">
+            <select id="Locations" name="Locations" class="fieldname">
                 <option value="" disabled selected hidden>please select a Location</option>
                 <option value="Adohad">Adohad</option>
                 <option value="Brunad">Brunad</option>
@@ -35,7 +35,7 @@
             </select>
             <br>
             <h2 class="fieldname">Please enter the Date</h2>
-                <h2>Please enter the date when you were observing the bird</h2>
+                <h3>Please enter the date when you were observing the bird</h3>
             <div id="error_for_date"></div>
             <input id="date" type="date" name="date">
             <br>
@@ -43,11 +43,22 @@
                 <h3>Please enter the time when you were observing the bird and the duration of the observation</h3>
             <div id="error_for_time"></div>
             <label for="hour">Hour:</label>
-            <input id="hour" type="number" min="00" max="24" name="hour" > 
+            <input id="hour" type="number" min="00" max="24" name="hour" placeholder="HH"> 
             <label for="minute">Minute:</label>
-            <input id="minute" type="number" min="00" max="59" name="minute" >
+            <input id="minute" type="number" min="00" max="59" name="minute" placeholder="MM">
             <label for="duration">Duration (minutes):</label>
-            <input id="duration" type="number" min="0" name="duration_of_observation" >
+            <input id="duration" type="number" min="0" name="duration_of_observation" placeholder="Duration">
+            <br>
+            <h2 class="fieldname">Please select an activity </h2>
+                <h3>Please select the activity you observed the bird doing</h3>
+            <div id="error_for_activity"></div>
+            <select id="activity" name="activity">
+                <option value="" disabled selected hidden>please select an activity</option>
+                <option value="Feeding">Feeding</option>
+                <option value="Nesting">Nesting</option>
+                <option value="Visiting">Visiting</option>
+                <option value="Other">other</option>
+            </select>
             <br>
             <h2 class="fieldname">Please select a Species</h2>
                 <h3>Please select the species of the bird you were observing</h3>
@@ -67,10 +78,10 @@
             </select>
             <br>
             <h2 class="ending">Please enter a comment</h2>
-                <h3 class="ending">Please enter a comment about the bird you were observing</h3>
-            <textarea name="comment" rows="10" cols="10"></textarea>
+                <h3 id="comment_error" class="ending">Please enter a comment about the bird you were observing</h3>
+            <textarea id="text_area" name="comment" rows="10" cols="10" placeholder="placeholder comment"></textarea>
             <br>
-                <h2 class="ending">Add image (optional)</h2>
+            <h2 class="ending">Add image (optional)</h2>
             <label class="label" for="checkboxyes" >Yes</label>
             <input id="checkboxyes" type="checkbox" value="Yes" name="checkbox">
             <input type="file" id="image_for_post" name="image">
