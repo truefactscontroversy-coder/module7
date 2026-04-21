@@ -1,31 +1,10 @@
 
 const login_button = document.getElementById("login") 
 
-/*
-if (login_button){
 
-    login_button.addEventListener("click", goToaccount);
-}
-function goToaccount() {
-        window.open('account_info.html', '_blank');
-        window.close('login_page.html');
-}
-*/
 
 const create_accou = document.getElementById("create_account");
-/*
-if (create_accou){
-    create_accou.addEventListener("click", goToaccount_after_creation);
-};
-*/
-/*function goToaccount_after_creation(){
-    window.location.href = "account_info.html";
-}
-function goToaccount() {
-        window.open('account_info.html', '_blank');
-        window.close('login_page.html');
-};
-*/
+
 const username_header = document.getElementById("username_header")
 
 const password_header = document.getElementById("password_header")
@@ -54,9 +33,7 @@ if (form_data) {
             on = true
             e.preventDefault()
         } 
-        /*if ((username.value !== '' && username.value !== null) && password.value !== '' && password.value !== null) {
-            login_button.addEventListener("submit", goToaccount);
-        }*/
+        
     
     });
     
@@ -80,14 +57,6 @@ const error_from_backend_login = document.getElementById("invalid_cred_login")
 const error_from_backend_create = document.getElementById("invalid_cred_create")
 
 
-/*
-function back_end_error(){
-    form_data.addEventListener("submit", function(e) {
-        error_from_backend.style.display = "block"
-    e.preventDefault()
-    })
-
-}*/
     
 if (form_data) {
     form_data.addEventListener("submit", function(e) {
@@ -145,9 +114,7 @@ if (data_for_account_create) {
             on = true
             e.preventDefault()
         } 
-        /*if ((username.value !== '' && username.value !== null) && password.value !== '' && password.value !== null) {
-            login_button.addEventListener("submit", goToaccount);
-        }*/
+       
     
     });
     
@@ -197,3 +164,44 @@ if (data_for_account_create) {
 
 
 }
+
+/*
+if (login_button){
+
+    login_button.addEventListener("click", goToaccount);
+}
+function goToaccount() {
+        window.open('account_info.html', '_blank');
+        window.close('login_page.html');
+}
+*/
+
+/*
+if (create_accou){
+    create_accou.addEventListener("click", goToaccount_after_creation);
+};
+*/
+/*function goToaccount_after_creation(){
+    window.location.href = "account_info.html";
+}
+function goToaccount() {
+        window.open('account_info.html', '_blank');
+        window.close('login_page.html');
+};
+*/
+/*if ((username.value !== '' && username.value !== null) && password.value !== '' && password.value !== null) {
+            login_button.addEventListener("submit", goToaccount);
+        }*/
+
+/*
+function back_end_error(){
+    form_data.addEventListener("submit", function(e) {
+        error_from_backend.style.display = "block"
+    e.preventDefault()
+    })
+
+}*/
+
+ /*if ((username.value !== '' && username.value !== null) && password.value !== '' && password.value !== null) {
+            login_button.addEventListener("submit", goToaccount);
+        }*/

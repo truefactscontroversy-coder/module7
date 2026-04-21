@@ -36,18 +36,7 @@ const error_for_activity = document.getElementById("error_for_activity")
 if (check_yes) {
     check_yes.addEventListener("click", show_image);
 }
-/*
-if (check_yes && check_no) {
-    form_data.addEventListener("submit", (e) =>{
-        if (check_yes.checked === false && check_no === false) {
-            error_for_image.style.border = "solid";
-        } else {
-            check_yes.addEventListener("click", show_image);
-        };
-    e.preventDefault()
-});
-};
-*/
+
 
 function show_image() {
     if (check_yes.checked){
@@ -270,3 +259,16 @@ if (form_data) {
         })
     });
 }   
+
+/*
+if (check_yes && check_no) {
+    form_data.addEventListener("submit", (e) =>{
+        if (check_yes.checked === false && check_no === false) {
+            error_for_image.style.border = "solid";
+        } else {
+            check_yes.addEventListener("click", show_image);
+        };
+    e.preventDefault()
+});
+};
+*/
